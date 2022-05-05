@@ -88,6 +88,11 @@ const getFreshchatInstance = ({ appToken, host, config = {} }) => {
 
     window.fcWidget.user.setProperties(vm.user)
   }
+  freshchat.setConfig = config => {
+    if (!vm.ready) return
+
+    window.fcWidget.setConfig(config)
+  }
   freshchat.open = payload => {
     if (!vm.ready) return
 

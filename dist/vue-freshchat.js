@@ -164,6 +164,11 @@
       window.fcWidget.user.setProperties(vm.user);
     };
 
+    freshchat.setConfig = function (config) {
+      if (!vm.ready) return;
+      window.fcWidget.setConfig(config);
+    };
+
     freshchat.open = function (payload) {
       if (!vm.ready) return;
       window.fcWidget.open(payload);
